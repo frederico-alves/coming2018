@@ -1,0 +1,22 @@
+{
+  "name": "coming2018",
+  "version": "1.0.0",
+  "description": "Frederico Alves Webpage 2018",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredericoAlvesJS/coming2018.git"
+  },
+  "author": "Frederico Alves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredericoAlvesJS/coming2018/issues"
+  },
+  "homepage": "https://github.com/fredericoAlvesJS/coming2018#readme",
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}

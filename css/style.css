@@ -17,21 +17,28 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: white;
+  height: 100vh;
+  background-color: #001915;
+  background-image: linear-gradient(to top, rgba(36, 36, 62, 0.6), rgba(4, 3, 14, 1)), url("../img/hero.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 header {
   height: 100vh;
-  background-color: #001915;
   position: relative;
-  background-image: linear-gradient(to top, rgba(36, 36, 62, 0.6), rgba(4, 3, 14, 1)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
 }
 
 .content__centered {
   width: 100%;
   position: absolute;
-  top: 60%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -55,7 +62,6 @@ header {
   background-size: 250%;
 }
 
-.block__1:hover,
 .block__2:hover {
   color: #001915;
   background-position: 100%;
@@ -66,19 +72,23 @@ header {
 .block__3 {
   font-size: 0.62rem;
   letter-spacing: 0.2rem;
-  color: #001915;
-  background-color: white;
   backface-visibility: hidden;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-}
-
-.block__3:hover {
   background-color: transparent;
   border-top: 0.05rem solid white;
   padding-top: 15px;
   color: white;
   transform: translateY(15px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0);
+}
+
+@media screen and (min-width: 2001px){
+  html {
+    font-size: 60px;
+  }
+
+  .flex-box {
+    max-width: 1200px;
+  }
 }
 
 @media screen and (max-width: 2000px) and (min-width: 851px) {
@@ -104,7 +114,7 @@ header {
 }
 
 .block__4 {
-  /* display: none; */
+  display: inline-block;
   margin-top: 60px;
 }
 
@@ -123,15 +133,27 @@ header {
 
 .block__4 a:focus,
 .block__4 a:hover {
+  text-decoration: none;
+  font-size: 0.4rem;
+  padding: .3rem .5rem;
   color: white;
-  /* font-size: 0.5rem; */
   border-top: 0.07rem solid white;
   border-bottom: 0.07rem solid white;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
+.block__4--sm a {
+  margin: .3rem 0;
+  font-size: 0.2rem;
+  letter-spacing: .2rem;
+}
+
+.block__4--sm a:hover {
+  font-size: 0.2rem;
+}
+
  .toggle-media {
-  display: inline-block;
+  display: block;
   z-index: 100;
   opacity: 0; 
   visibility: hidden; 
@@ -147,7 +169,7 @@ header {
 
 .icon {
   display: inline-block;
-  margin: .2rem;
+  margin: .2rem .2rem 0 .2rem;
 }
 
 .icon a {
@@ -181,4 +203,113 @@ header {
   color: rgba(255, 255, 255, 0.3);
   font-weight: 100;
   font-size: .4rem;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ========================== */
+/* PROJECT PAGE */
+/* ========================== */
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title h1 {
+  padding-top: .3rem;
+  margin-bottom: .1rem;
+  font-size: 1rem;
+}
+
+.title h2 {
+  font-size: .6rem;
+  margin-bottom: .5rem;
+}
+
+.title .border__bottom {
+  border-bottom: 3px solid #fff;
+}
+
+.projects__group {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  max-width: 1200px;
+  /* background-color: rgba(255, 0, 0, 0.233); */
+}
+
+.project__box {
+  margin: 0  .2rem;
+  margin-bottom: .7rem;
+  padding-bottom: .2rem;
+  font-size: .3rem;
+  color: #54657a;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 10px 10px 71px -9px rgba(0,0,0,0.75);
+  overflow: hidden;
+}
+
+.project__title { 
+  text-transform: uppercase;
+  font-weight: 700;
+
+  padding: 0 .3rem;
+}
+
+.project__description {
+  font-weight: 200;
+
+  padding: 0 .3rem;
+}
+
+.project__image {
+  width: 100%;
+  height: 200px;
+  background-color: transparent;
+  margin-bottom: .05rem;
+
+  overflow: hidden;
+}
+
+.project__image img {
+  transform: scale(1);
+  transition: transform .5s;
+}
+
+.project__box:hover .project__image img {
+  transform: scale(1.05);
+}
+
+.project__buttons {
+  padding: 0 .3rem;
+}
+
+.project__buttons a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .2rem;
+  font-weight: 200;
+}
+
+.project__btn {
+  background-color: #54657a;
+  padding: .1rem .2rem;
+  border-radius: 3px;
+  margin-right: .05rem;
+
+  transition: background-color .3s;
+}
+
+.project__btn:hover {
+  background-color: #001915;
 }
